@@ -4,8 +4,11 @@ import pickle as pkl
 import pandas as pd
 import json
 
+with open("config.json") as f:
+    API_KEY = json.load(f)['api_key']
+
 def fetch_poster(i,ps):
-    response = rs.get(f"https://api.themoviedb.org/3/movie/{i}?api_key=4088cd71fc0b9a4025309d0270bbf7d4")
+    response = rs.get(f"https://api.themoviedb.org/3/movie/{i}?api_key="+API_KEY)
     data = response.json()
     try:
         return "https://image.tmdb.org/t/p/w500/"+data['poster_path']
