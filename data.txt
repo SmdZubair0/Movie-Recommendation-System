@@ -1,0 +1,3 @@
+Datasets : https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?select=credits.csv
+
+files i created : https://drive.google.com/drive/folders/11UawvVuV8-slwa1Qv9WjWbkMjPJL3OBA?usp=drive_link
