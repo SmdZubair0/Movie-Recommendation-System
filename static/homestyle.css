@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    min-height: 73vh;
+    background-color: black;
+}
+
+
+.content{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+.content form{
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.moviename{
+    height: 35px;
+    width:80vh;
+    border-radius: 10px;
+    background-color: rgb(42, 41, 41);
+    font-size: large;
+    color: whitesmoke;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid rgb(255, 248, 248);
+}
+.suggestionlist{
+    width: 80vh;
+    color: whitesmoke;
+    background-color: rgb(42, 41, 41);
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+.suggestionlist li{
+    list-style: none;
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    font-size: 20px;
+}
+.suggestionlist li:hover{
+    cursor: pointer;
+}
+.content button{
+    height: 35px;
+    width:130px;
+    background-color:red;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size:medium;
+}
+.content button:hover{
+    box-shadow: 0px 0px 12px white
+}
+
+.predictions{
+    color: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.moviecard{
+    height: 400px;
+    width: 250px;
+    background-color: rgb(62, 63, 63);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+}
+.moviecard:hover{
+    scale: 1.1;
+}
+.movieimg{
+    margin-bottom: 15px;
+    background-color: blue;
+    width: 250px;
+    height: 300px;
+}
+.poster{
+    width: 250px;
+    height: 300px;
+}
+.movietitle{
+    display: flex;
+    justify-content: center;
+    font-size:25px;
+    width: 250px;
+    align-items: center;
+}
+
+@media screen and (max-width:650px) {
+    .moviename{
+        width: 300px;
+    }
+    .suggestionlist{
+        width: 310px;
+    }
+}

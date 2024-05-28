@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    
+    <div class="content">
+        <form method="post">
+            <input type="text" class="moviename" id='name' name="moviename">
+            <ul class="suggestionlist"></ul>
+            <button id="submit" type="submit">Recommend</button>
+        </form>
+    </div>
+    <div class="predictions">
+        {% if predicted %}
+            {% for i,j in predicted %}
+                <div class="moviecard"> 
+                    <div class="movieimg">
+                        <img class="poster" src="{{ j }}" alt="">
+                    </div>
+                    <div class="movietitle">{{ i }}</div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</main>
+
+<script>
+
+    function decodeHtml(html) {
+        let txt = document.createElement("textarea");
+        txt.innerHTML = html;
+        return txt.value;
+    }
+
+    let a = []
+    {% for i in movielist %}
+        a.push(decodeHtml("{{i}}"))
+    {% endfor %}
+    
+    
+    let b = document.getElementById("name")
+    b.addEventListener("input",suggest)
+    function suggest(){
+        let sug = []
+        let input = b.value.toLowerCase()
+        for (let i of a){
+            if(i.toLowerCase().startsWith(input)) sug.push(i)
+        }
+
+        let s = document.querySelector(".suggestionlist")
+        s.innerHTML = ""
+        sug.slice(0,5).forEach(movie => {
+            let listItem = document.createElement("li");
+            listItem.textContent = movie;
+            listItem.addEventListener("click", function() {
+                b.value = movie;
+                s.innerHTML = ""; // Clear suggestions after selection
+            });
+            s.appendChild(listItem);
+        });
+    }
+    document.querySelector(".content").addEventListener("click",()=>{
+        document.querySelector(".suggestionlist").innerHTML = "";
+    })
+
+</script>
+{% endblock %}

@@ -1,0 +1,15 @@
+.ab-main{
+    color: whitesmoke;
+    font-size: 25px;
+    padding: 30px;
+}
+.points{
+    margin: 30px;
+    margin-left: 60px;
+}
+.points li{
+    font-size: 25px;
+}
+a{
+    text-decoration: underline;
+}

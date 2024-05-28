@@ -1,0 +1,69 @@
+Types of Recomenadion Systems
+
+  - content based = Recomend the same genre we watch before 
+  (music videos are recommended if we have watched music videos)
+
+  - collaborative filtering = based on users interrest
+  (if user A and user B have similar intrests (found based on their previous ratings etc) then if user A watched a movie it is recommended to user B also)
+
+  - hybrid = both content based and collaborative filtering
+
+
+
+steps :
+1. collect data
+2. preprocessing
+3. model building
+4. make a website
+5. deploy
+
+
+
+
+columns important from the dataset
+ adult = can be added to genres,
+ collection = might be important,
+ budget = not important,
+ genres = important,
+ id = important for fetching poster while deploying,
+ keyword = important,
+ original_language = important (selecting only some main languages only),
+ original_title = since it can be in other language it can cause problems,
+ title = important,
+ overview = important can compare content similarity,
+ popularity = not so much important,
+ production_companies = sometimes it might be important,
+ production_countries = not important,
+ release_date = considering only release year,
+ revenue  = not important,
+ runtime = not important,
+ spoken-languages = to check if it is atleast available as dub in main languages,
+ status = not important,
+ tagline = not impotant since overview is used,
+ cast = can be recommend based on actors,
+ crew = can be recommend besed on director,
+
+
+
+
+now we need to make a data set having only 3 columns 
+ - movie_id
+ - title_id
+ - tags
+tags contains all the values from the other column
+
+
+now create tags using this information
+
+create tag1 and tag2 seperately and encode them seperately
+
+tag1 contains genres, collection, cast, director, production_companies, original_language
+tag2 contains title_tag, overview, keywords
+
+after encoding them to vecs1 and vecs2 respectively using word2vec make a new vectors column by concatenating them along with rating and release_year
+
+tags = tag1 + tag2 + rating + relaease_year
+
+now find similarity for each movie with other movies and select 6 nearest neighbors (including itself)
+
+next is forntend (using flask, html, css, js)
