@@ -1,9 +1,4 @@
 pandas
 numpy
-pickle
-ast
-string
-re
-requests
 flask
 gunicorn
