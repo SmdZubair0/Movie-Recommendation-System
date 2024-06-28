@@ -15,7 +15,7 @@ def fetch_poster(i,ps):
     except:
         return "https://image.tmdb.org/t/p/w500/"+ps
 
-df = pd.read_csv('files/Data.csv')
+df = pd.read_csv('files/Title_ids.csv')
 similarities = json.load(open('files/similarities.json','rb'))
 
 movieslist = list(df['title'].values)
