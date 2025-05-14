@@ -23,7 +23,35 @@ A simple content-based movie recommender that suggests movies similar to the one
 - gensim
 
 ## 📂 Folder Structure
-<pre> 📦 movie-recommendation/ ├── files/ │ ├── Title_ids.csv │ ├── cast.json │ ├── directors.json │ ├── genres.json │ └── similarities.json ├── static/ │ ├── aboutstyle.css │ ├── homestyle.css │ ├── layoutstyle.css │ ├── i1.jpg │ ├── i2.jpg │ ├── link.png │ ├── logo.png │ └── unnamed.png ├── templates/ │ ├── about.html │ ├── contact.html │ ├── index.html │ └── layout.html ├── .gitignore ├── Recommender.ipynb ├── app.py ├── config.json ├── data.txt ├── recomendation_system.txt ├── requirements.txt └── README.md </pre>
+<pre> 📦 movie-recommendation/ 
+    ├── files/ 
+    │ ├── Title_ids.csv 
+    │ ├── cast.json 
+    │ ├── directors.json 
+    │ ├── genres.json  
+    │ └── similarities.json 
+    ├── static/ 
+    │ ├── aboutstyle.css 
+    │ ├── homestyle.css 
+    │ ├── layoutstyle.css 
+    │ ├── i1.jpg 
+    │ ├── i2.jpg 
+    │ ├── link.png 
+    │ ├── logo.png 
+    │ └── unnamed.png 
+    ├── templates/ 
+    │ ├── about.html 
+    │ ├── contact.html 
+    │ ├── index.html 
+    │ └── layout.html 
+    ├── .gitignore 
+    ├── Recommender.ipynb 
+    ├── app.py 
+    ├── config.json 
+    ├── data.txt 
+    ├── recomendation_system.txt 
+    ├── requirements.txt 
+    └── README.md </pre>
 
 ## ▶️ How to Run
 
